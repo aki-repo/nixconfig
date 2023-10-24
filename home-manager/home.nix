@@ -10,7 +10,7 @@
     # If you want to use home-manager modules from other flakes (such as nix-colors):
     # nix-colors.homeManagerModules.default
 
-   # ./wm
+   ./wm
   ];
 
   nixpkgs = {
@@ -42,7 +42,7 @@
 
   # Add stuff for your user as you see fit:
   # programs.neovim.enable = true;
-    home.packages = with pkgs; [ firefox vscode wofi img mpv zip unzip cava nerdfonts iosevka dunst ];
+    home.packages = with pkgs; [ firefox vscode wofi img mpv zip unzip cava nerdfonts iosevka ];
 
   # Enable home-manager and git
     programs.home-manager.enable = true;
@@ -50,11 +50,6 @@
       enable = true;
       userName = "Andreas Taenzer";
       userEmail = "andreast.work@gmail.com";
-      extraConfig = {
-      credential.helper = "${
-          pkgs.git.override { withLibsecret = true; }
-        }/bin/git-credential-libsecret";
-      };
     };
 
   # Nicely reload system units when changing configs
