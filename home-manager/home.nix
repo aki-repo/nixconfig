@@ -42,7 +42,7 @@
 
   # Add stuff for your user as you see fit:
   # programs.neovim.enable = true;
-    home.packages = with pkgs; [ firefox vscode wofi img mpv zip unzip cava nerdfonts iosevka ];
+    home.packages = with pkgs; [ firefox vscode wofi img mpv zip unzip cava nerdfonts iosevka dunst ];
 
   # Enable home-manager and git
     programs.home-manager.enable = true;
