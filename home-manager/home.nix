@@ -50,6 +50,11 @@
       enable = true;
       userName = "Andreas Taenzer";
       userEmail = "andreast.work@gmail.com";
+      extraConfig = {
+      credential.helper = "${
+          pkgs.git.override { withLibsecret = true; }
+        }/bin/git-credential-libsecret";
+      };
     };
 
   # Nicely reload system units when changing configs
