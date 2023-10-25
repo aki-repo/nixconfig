@@ -39,7 +39,4 @@ wayland.windowManager.sway = {
         outer = 20;
       };
     };
-  };
-
-
 }
