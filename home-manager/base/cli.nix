@@ -3,6 +3,7 @@
     btop
     cava
     pamixer
+    brightnessctl
   ];
 
 }

@@ -13,6 +13,7 @@
     swayidle
     foot
     kitty
+    wofi
   ];
 
   # make some environment tweaks for wayland
