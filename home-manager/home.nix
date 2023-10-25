@@ -10,7 +10,7 @@
     # If you want to use home-manager modules from other flakes (such as nix-colors):
     # nix-colors.homeManagerModules.default
     ./wayland
-   
+    ./wm
   ];
 
   nixpkgs = {
