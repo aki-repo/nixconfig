@@ -11,7 +11,8 @@
     swaybg
     swaylock
     swayidle
-    
+    foot
+    kitty
   ];
 
   # make some environment tweaks for wayland
