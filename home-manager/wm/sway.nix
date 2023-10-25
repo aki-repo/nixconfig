@@ -9,7 +9,7 @@ wayland.windowManager.sway = {
       menu = "wofi --show drun";
       keybindings =
         let
-          pactl = "${pkgs.pulseaudio}/bin/pactl";
+          pamixer = "${pamixer}";
           playerctl = "${pkgs.playerctl}/bin/playerctl";
         in
         lib.mkOptionDefault {
@@ -17,10 +17,10 @@ wayland.windowManager.sway = {
           "${modifier}+Shift+q" = "exec exit";
 
           # audio keys
-          XF86AudioMute = "exec ${pactl} set-sink-mute 0 toggle";
-          XF86AudioLowerVolume = "exec ${pactl} set-sink-volume 0 -5%";
-          XF86AudioRaiseVolume = "exec ${pactl} set-sink-volume 0 +5%";
-          XF86AudioMicMute = "exec ${pactl} set-source-mute 0 toggle";
+          XF86AudioMute = "exec pamixer -t";
+          XF86AudioLowerVolume = "exec pamixer -d 5";
+          XF86AudioRaiseVolume = "exec pamixer -i 5";
+          XF86AudioMicMute = "exec pamixer -m";
 
           # media keys
           XF86AudioPlay = "exec ${playerctl} play-pause";
