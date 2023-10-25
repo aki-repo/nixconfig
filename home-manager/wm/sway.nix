@@ -2,14 +2,34 @@
 
 wayland.windowManager.sway = {
     enable = true;
+    systemDintegration = true;
     config = rec {
-      modifier = "Mod4";
+      mod = "Mod4";
       # Use kitty as default terminal
       terminal = "kitty"; 
-      startup = [
-        # Launch Firefox on start
-        {command = "firefox";}
-      ];
+      menu = wofi --show drun;
+      keybindings =
+        let
+          # why
+        in
+        lib.mkOptionDefault {
+          "${modifier}+q" = "exec killactive";
+          "${modifier}+Shift+q" = "exec exit";
+          "
+
+          # audio keys
+          XF86AudioMute = "exec ${pactl} set-sink-mute 0 toggle";
+          XF86AudioLowerVolume = "exec ${pactl} set-sink-volume 0 -5%";
+          XF86AudioRaiseVolume = "exec ${pactl} set-sink-volume 0 +5%";
+          XF86AudioMicMute = "exec ${pactl} set-source-mute 0 toggle";
+
+          # media keys
+          XF86AudioPlay = "exec ${playerctl} play-pause";
+          XF86AudioPause = "exec ${playerctl} play-pause";
+          XF86AudioNext = "exec ${playerctl} next";
+          XF86AudioPrev = "exec ${playerctl} previous";
+        };
+
     };
   };
 
