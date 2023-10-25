@@ -14,11 +14,10 @@ home.packages = with pkgs; [
 
 wayland.windowManager.hyprland = {
   enable = true;
-  xwayland = {
-    enable = true;
-  };
+  xwayland.enable = true;
   enableNvidiaPatches = true;
-  #package = pkgs.inputs.hyperland.hyperland;
+  package = pkgs.hyprland;
+  recommendedEnvironment = true;
   systemdIntegration = true;
 
 };  
