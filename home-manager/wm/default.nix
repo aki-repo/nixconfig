@@ -1,7 +1,8 @@
 { config, pkgs, ... }: {
 
 imports = [
-    ./hyprland
+    #./hyprland
+    ./sway.nix
 ];
 }
 
