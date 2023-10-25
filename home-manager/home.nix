@@ -11,6 +11,7 @@
     # nix-colors.homeManagerModules.default
     ./wayland
     ./wm
+    ./base
   ];
 
   nixpkgs = {
