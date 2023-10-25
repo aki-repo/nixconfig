@@ -2,12 +2,11 @@
 
 wayland.windowManager.sway = {
     enable = true;
-    systemDintegration = true;
     config = rec {
-      mod = "Mod4";
+      modifier = "Mod4";
       # Use kitty as default terminal
       terminal = "kitty"; 
-      menu = wofi --show drun;
+      menu = "wofi --show drun";
       keybindings =
         let
           pactl = "${pkgs.pulseaudio}/bin/pactl";
@@ -16,7 +15,6 @@ wayland.windowManager.sway = {
         lib.mkOptionDefault {
           "${modifier}+q" = "exec killactive";
           "${modifier}+Shift+q" = "exec exit";
-          "
 
           # audio keys
           XF86AudioMute = "exec ${pactl} set-sink-mute 0 toggle";
