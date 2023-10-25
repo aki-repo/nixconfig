@@ -27,6 +27,20 @@
           # ...
         };
       };
+
+      foot = {
+        enable = true;
+        settings = {
+          main = {
+            font = "monospace:size=12";
+          };
+          colors = {
+            foreground = "#${config.colorScheme.colors.base05}";
+            background = "#${config.colorScheme.colors.base00}";
+          };
+        };
+      };
+
     };
     
   };

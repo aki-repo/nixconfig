@@ -11,7 +11,6 @@
     swaybg
     swaylock
     swayidle
-    foot
     wofi
     waybar
   ];
