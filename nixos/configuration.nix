@@ -120,11 +120,10 @@ i18n.defaultLocale = "en_US.UTF-8";
 
 # Enable the X11 windowing system.
 services.xserver.enable = true;
-services.xserver.displayManager.startx.enable = true;
+#services.xserver.displayManager.startx.enable = true;
 # Enable the GNOME Desktop Environment.
-#services.xserver.displayManager.gdm.enable = true;
-#services.xserver.desktopManager.plasma5.enable = true;
-#services.xserver.displayManager.defaultSession = "hyprland";
+services.xserver.displayManager.sddm.enable = true;
+services.xserver.desktopManager.plasma5.enable = true;
 
 # Configure keymap in X11
 services.xserver = {

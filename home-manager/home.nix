@@ -10,7 +10,7 @@
     # If you want to use home-manager modules from other flakes (such as nix-colors):
     # nix-colors.homeManagerModules.default
 
-   ./wm
+   
   ];
 
   nixpkgs = {
@@ -42,7 +42,7 @@
 
   # Add stuff for your user as you see fit:
   # programs.neovim.enable = true;
-    home.packages = with pkgs; [ firefox vscode wofi img mpv zip unzip cava nerdfonts iosevka ];
+     home.packages = with pkgs; [ vscode firefox zip unzip nerdfonts iosevka ];
 
   # Enable home-manager and git
     programs.home-manager.enable = true;
