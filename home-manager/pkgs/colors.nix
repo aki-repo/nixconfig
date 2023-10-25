@@ -38,6 +38,7 @@
         colors = {
           foreground = "${config.colorScheme.colors.base05}";
           background = "${config.colorScheme.colors.base00}";
+          regular0 = "${config.colorScheme.colors.base02}";
         };
       };
   

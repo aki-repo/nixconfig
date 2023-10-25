@@ -15,6 +15,7 @@ wayland.windowManager.sway = {
       terminal = "kitty"; 
       menu = "wofi --show drun";
       bars = [{command = "waybar";}];
+      startup = [{command = "swaybg -i /home/aki/walls/gruvbox-light-rainbow.png"; }]
       keybindings =
         let
           pamixer = "${pamixer}";
