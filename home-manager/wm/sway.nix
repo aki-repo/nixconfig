@@ -33,10 +33,10 @@ wayland.windowManager.sway = {
           "XF86MonBrightnessDown" = "exec brightnessctl set 5%-";
           "XF86MonBrightnessUp" = "exec brightnessctl set 5%+";
         };
-    };
-      gaps = {
+        gaps = {
         inner = 10;
         outer = 20;
       };
+    };
     };
 }
