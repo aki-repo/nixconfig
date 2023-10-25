@@ -14,8 +14,8 @@ wayland.windowManager.sway = {
           playerctl = "${pkgs.playerctl}/bin/playerctl";
         in
         lib.mkOptionDefault {
-          "${modifier}+q" = "exec killactive";
-          "${modifier}+Shift+q" = "exec exit";
+          "${modifier}+q" = "kill";
+          "${modifier}+Shift+q" = "exit";
 
           # audio keys
           XF86AudioMute = "exec pamixer -t";
@@ -28,8 +28,16 @@ wayland.windowManager.sway = {
           XF86AudioPause = "exec ${playerctl} play-pause";
           XF86AudioNext = "exec ${playerctl} next";
           XF86AudioPrev = "exec ${playerctl} previous";
-        };
 
+          # brightness
+          "XF86MonBrightnessDown" = "exec brightnessctl set 5%-";
+          "XF86MonBrightnessUp" = "exec brightnessctl set 5%+";
+        };
+    };
+      gaps = {
+        inner = 10;
+        outer = 20;
+      };
     };
   };
 
