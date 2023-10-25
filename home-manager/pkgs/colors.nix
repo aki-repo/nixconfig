@@ -4,7 +4,7 @@
     nix-colors.homeManagerModules.default
   ];
 
-  colorScheme = nix-colors.colorSchemes.gruvbox-light-soft;
+  colorScheme = nix-colors.colorSchemes.gruvbox-dark-soft;
 
   programs = {
     kitty = {
