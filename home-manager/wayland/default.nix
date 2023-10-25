@@ -13,6 +13,7 @@
     swayidle
     foot
     wofi
+    waybar
   ];
 
   # make some environment tweaks for wayland

@@ -1,14 +1,20 @@
 { inputs, lib, config, pkgs, ... }: {
 
+
 wayland.windowManager.sway = {
     enable = true;
     wrapperFeatures.gtk = true;
     config = rec {
       modifier = "Mod4";
       window.border = 0;
+      floating.border = 0;
+      window.titlebar = false;
+      floating.titlebar = false;
+
       # Use kitty as default terminal
       terminal = "kitty"; 
       menu = "wofi --show drun";
+      bars = [{command = "waybar";}];
       keybindings =
         let
           pamixer = "${pamixer}";
@@ -17,8 +23,8 @@ wayland.windowManager.sway = {
         lib.mkOptionDefault {
           "${modifier}+q" = "kill";
           "${modifier}+Shift+q" = "exit";
-          "${modifier}+Return" = "exec kitty";
-          "${modifier}+Shift+Return" = "exec foot";
+          "${modifier}+Return" = "exec foot";
+          "${modifier}+Shift+Return" = "exec kitty";
 
           # audio keys
           XF86AudioMute = "exec pamixer -t";
