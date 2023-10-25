@@ -5,6 +5,7 @@ wayland.windowManager.sway = {
     wrapperFeatures.gtk = true;
     config = rec {
       modifier = "Mod4";
+      window.border = 0;
       # Use kitty as default terminal
       terminal = "kitty"; 
       menu = "wofi --show drun";
@@ -16,6 +17,8 @@ wayland.windowManager.sway = {
         lib.mkOptionDefault {
           "${modifier}+q" = "kill";
           "${modifier}+Shift+q" = "exit";
+          "${modifier}+Return" = "exec kitty";
+          "${modifier}+Shift+Return" = "exec foot";
 
           # audio keys
           XF86AudioMute = "exec pamixer -t";
@@ -36,7 +39,7 @@ wayland.windowManager.sway = {
         gaps = {
         inner = 10;
         outer = 20;
+        };
       };
-    };
     };
 }

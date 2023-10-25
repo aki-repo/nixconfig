@@ -12,6 +12,7 @@
     ./wayland
     ./wm
     ./base
+    ./pkgs
   ];
 
   nixpkgs = {

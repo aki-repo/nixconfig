@@ -15,15 +15,6 @@
         # ...
       };
     };
-    qutebrowser = {
-      enable = true;
-      colors = {
-        # Becomes either 'dark' or 'light', based on your colors!
-        webppage.preferred_color_scheme = "${config.colorScheme.kind}";
-        tabs.bar.bg = "#${config.colorScheme.colors.base00}";
-        keyhint.fg = "#${config.colorScheme.colors.base05}";
-        # ...
-      };
-    };
+    
   };
 }
