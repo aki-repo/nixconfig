@@ -12,7 +12,6 @@
     swaylock
     swayidle
     foot
-    kitty
     wofi
   ];
 
