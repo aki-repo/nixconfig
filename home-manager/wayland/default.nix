@@ -7,7 +7,7 @@
     
   ];
 
-  home.packages = with.pkgs [
+  home.packages = with pkgs; [
     swaybg
     swaylock
     swayidle
