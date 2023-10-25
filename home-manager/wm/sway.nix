@@ -10,7 +10,8 @@ wayland.windowManager.sway = {
       menu = wofi --show drun;
       keybindings =
         let
-          # why
+          pactl = "${pkgs.pulseaudio}/bin/pactl";
+          playerctl = "${pkgs.playerctl}/bin/playerctl";
         in
         lib.mkOptionDefault {
           "${modifier}+q" = "exec killactive";
