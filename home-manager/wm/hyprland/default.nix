@@ -1,15 +1,15 @@
 { inputs, lib, config, pkgs, ... }: {
 
 imports = [
-    inputs.hyprland.homeManagerModules.default
+    #inputs.hyprland.homeManagerModules.default
     ./config.nix
   ];
 
 
 home.packages = with pkgs; [
-  inputs.hyprland.packages.${system}.grimblast
-  inputs.hyprland.packages.${system}.xdg-desktop-portal-hyprland
-  inputs.hyprland.packages.${system}.hyprland-waybar
+  inputs.hyprland-contrib.grimblast
+  inputs.hyprland.xdg-desktop-portal-hyprland
+  inputs.hyprland.hyprland-waybar
 ];
 
 wayland.windowManager.hyprland = {

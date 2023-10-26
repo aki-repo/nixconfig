@@ -42,39 +42,6 @@
         };
       };
     };
-    waybar = {
-      enable = true;
-      settings = {
-        # Specify your custom colors here
-        colors = {
-          background = "#222222";
-          foreground = "#dddddd";
-          # Add more custom colors as needed
-          };
-
-        # Define the modules you want to include
-        modules = [
-          {
-            "type" = "clock";
-            "format" = "%H:%M %p";
-            "timezone" = "EST";
-          }
-          {
-            "type" = "battery";
-            "format" = "Battery: {percentage}%";
-            "interval" = 10;
-          }
-          {
-            "type" = "tray";
-            "icon-size" = 20;
-          }
-          {
-            "type" = "pulseaudio";
-            "format" = "Vol: {volume}%";
-          }
-        ];
-      };
-    };
     
   };
 }
