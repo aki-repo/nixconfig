@@ -54,7 +54,7 @@
     homeConfigurations = {
       "aki@kiste" = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
-        extraSpecialArgs = { inherit nix-colors; };
+        extraSpecialArgs = { inherit inputs outputs nix-colors; };
     #    # > Our main home-manager configuration file <
         modules = [./home/kiste/home.nix
                   hyprland.homeManagerModules.default

@@ -45,7 +45,7 @@
   # Add stuff for your user as you see fit:
   # programs.neovim.enable = true;
   
-  home.packages = with pkgs; [ firefox zip unzip nerdfonts iosevka font-awesome ];
+  home.packages = with pkgs; [ zip unzip nerdfonts iosevka font-awesome ];
 
   # Enable home-manager and git
     programs.home-manager.enable = true;
