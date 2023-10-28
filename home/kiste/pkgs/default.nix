@@ -2,7 +2,7 @@
   imports = [
     ./colors.nix
     ./editors.nix
-    ./web.nix
+    # ./web.nix
   ];
 }
 
