@@ -35,7 +35,7 @@
       kiste = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs outputs;};
         # > Our main nixos configuration file <
-        modules = [./nixos/configuration.nix];
+        modules = [./hosts/kiste/configuration.nix];
       };
     };
 
@@ -45,8 +45,8 @@
       "aki@kiste" = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
         extraSpecialArgs = { inherit nix-colors; };
-        # > Our main home-manager configuration file <
-        modules = [./home-manager/home.nix];
+    #    # > Our main home-manager configuration file <
+        modules = [./home/kiste/home.nix];
       };
     };
   };

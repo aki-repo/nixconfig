@@ -1,10 +1,6 @@
 { config, pkgs, lib, ... }: {
   imports = [
-    
-    #./dunst.nix
-    #./rofi.nix
-    #./utilities.nix
-    
+        
   ];
 
   home.packages = with pkgs; [
@@ -12,7 +8,6 @@
     swaylock
     swayidle
     wofi
-    waybar
   ];
 
   # make some environment tweaks for wayland

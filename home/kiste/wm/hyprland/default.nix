@@ -1,7 +1,7 @@
 { inputs, lib, config, pkgs, ... }: {
 
 imports = [
-    #inputs.hyprland.homeManagerModules.default
+    inputs.hyprland.homeManagerModules.default
     ./config.nix
   ];
 
@@ -17,8 +17,6 @@ wayland.windowManager.hyprland = {
   xwayland.enable = true;
   enableNvidiaPatches = true;
   package = pkgs.hyprland;
-  recommendedEnvironment = true;
-  systemdIntegration = true;
 
 };  
 
