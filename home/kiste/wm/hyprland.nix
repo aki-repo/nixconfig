@@ -18,7 +18,7 @@
     
   exec-once = swaybg -i /home/aki/walls/chinese-hills.jpg
   exec-once = waybar
-  
+
   # use this instead of hidpi patches
   #  xwayland {
   #    force_zero_scaling = true
@@ -87,6 +87,7 @@
     # See https://wiki.hyprland.org/Configuring/Master-Layout/ for more
       new_is_master = true
     }
+
 
     gestures {
     # See https://wiki.hyprland.org/Configuring/Variables/ for more
