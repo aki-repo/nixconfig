@@ -14,7 +14,7 @@ wayland.windowManager.sway = {
       # Use kitty as default terminal
       terminal = "kitty"; 
       menu = "wofi --show drun";
-      bars = [{command = "waybar -c /home/aki/.config/waybar-sway/config";}];
+      bars = [{command = "waybar -c ../../../.config/waybar-sway/config";}];
       startup = [{command = "swaybg -i /home/aki/w/gruvbox-dark-rainbow.png"; }];
       keybindings =
         let
