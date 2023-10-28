@@ -17,7 +17,8 @@
     env = XCURSOR_SIZE, 24
     
   exec-once = swaybg -i /home/aki/walls/chinese-hills.jpg
-
+  exec-once = waybar
+  
   # use this instead of hidpi patches
   #  xwayland {
   #    force_zero_scaling = true

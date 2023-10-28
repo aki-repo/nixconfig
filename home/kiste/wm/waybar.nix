@@ -12,9 +12,21 @@ programs.waybar = {
       "eDP-1"
       #"HDMI-A-1"
     ];
-    modules-left = [ "sway/workspaces" "sway/mode" "wlr/taskbar" ];
+    modules-left = [ "hyprland/workspaces" "sway/mode" "wlr/taskbar" ];
     modules-center = [ "clock" ];
     modules-right = [ "pulseaudio" "network" "temperature" "battery" ];
+
+    "hyprland/workspaces" = {
+      format = "<sub>{icon}</sub>\n{windows}";
+      format-window-separator = "\n";
+      window-rewrite-default = "";
+      window-rewrite = {
+        "firefox" = "";
+        "foot" = "";
+        "code" = "󰨞";
+      };
+    };
+
 
     "sway/workspaces" = {
       disable-scroll = true;
