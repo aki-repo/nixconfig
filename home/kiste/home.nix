@@ -8,7 +8,7 @@
   # You can import other home-manager modules here
   imports = [
     # If you want to use home-manager modules from other flakes (such as nix-colors):
-    # nix-colors.homeManagerModules.default
+    #nix-colors.homeManagerModules.default
     ./wayland
     ./wm
     ./base
@@ -45,7 +45,7 @@
   # Add stuff for your user as you see fit:
   # programs.neovim.enable = true;
   
-  home.packages = with pkgs; [ helix vscode firefox zip unzip nerdfonts iosevka ];
+  home.packages = with pkgs; [ zip unzip nerdfonts iosevka ];
 
   # Enable home-manager and git
     programs.home-manager.enable = true;
