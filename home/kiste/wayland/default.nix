@@ -2,13 +2,18 @@
   imports = [
         
   ];
+home.pointerCursor = {
+  gtk.enable = true;
+  package = pkgs.bibata-cursors;
+  name = "Bibata-Modern-Ice";
+  size = 22;
+};
 
   home.packages = with pkgs; [
     swaybg
     swaylock
     swayidle
     wofi
-    waybar
   ];
 
   # make some environment tweaks for wayland
