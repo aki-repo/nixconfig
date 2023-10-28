@@ -8,6 +8,7 @@
     swaylock
     swayidle
     wofi
+    waybar
   ];
 
   # make some environment tweaks for wayland
