@@ -14,6 +14,7 @@ home.pointerCursor = {
     swaylock
     swayidle
     wofi
+    grimblast
   ];
 
   # make some environment tweaks for wayland

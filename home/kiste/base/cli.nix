@@ -2,7 +2,7 @@
  home.packages = with pkgs; [
     btop
     cava
-    pamixer
+    wireplumber
     brightnessctl
   ];
 

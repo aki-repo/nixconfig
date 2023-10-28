@@ -3,8 +3,10 @@
   default,
   ...
 }: {
-
-  wayland.windowManager.hyprland.extraConfig = ''
+  wayland.windowManager.hyprland = {
+    enable = true;
+    enableNvidiaPatches = true;
+    extraConfig =  ''
     $mod = SUPER
 
     #env = LIBVA_DRIVER_NAME,nvidia
@@ -109,40 +111,35 @@
 
     windowrulev2 = dimaround, class:^(gcr-prompter)$
 
-    # fix xwayland apps
-    windowrulev2 = rounding 0, xwayland:1, floating:1
-    windowrulev2 = center, class:^(.*jetbrains.*)$, title:^(Confirm Exit|Open Project|win424|win201|splash)$
-    windowrulev2 = size 640 400, class:^(.*jetbrains.*)$, title:^(splash)$
+  # fix xwayland apps
+  windowrulev2 = rounding 0, xwayland:1, floating:1
+  windowrulev2 = center, class:^(.*jetbrains.*)$, title:^(Confirm Exit|Open Project|win424|win201|splash)$
+  windowrulev2 = size 640 400, class:^(.*jetbrains.*)$, title:^(splash)$
 
 
-    # mouse movements
-    bindm = $mod, mouse:272, movewindow
-    bindm = $mod, mouse:273, resizewindow
+  # mouse movements
+  bindm = $mod, mouse:272, movewindow
+  bindm = $mod, mouse:273, resizewindow
 
-    # commands
-    bind = $mod SHIFT, Q, exec, exit,
-    bind = $mod, Q, killactive,
-    bind = $mod, F, fullscreen,
-    bind = $mod, W, togglesplit,
-    bind = $mod, S, togglefloating,
-    bind = $mod, P, pseudo,
+  # commands
+  bind = $mod SHIFT, Q, exec, exit,
+  bind = $mod, Q, killactive,
+  bind = $mod, F, fullscreen,
+  bind = $mod, W, togglesplit,
+  bind = $mod, S, togglefloating,
+  bind = $mod, P, pseudo,
 
-    # utility
-    # launcher
-    bind = $mod, D, exec, wofi --show drun
-    # terminal
-    bind = $mod, Return, exec, kitty
-    bind = $mod SHIFT, Return, exec, foot
-    # logout menu
-    bind = $mod SHIFT, Q, exec, exit
-    # lock screen
-    bind = $mod, L, exec, loginctl lock-session
-
-    # move focus
-    bind = $mod, left, movefocus, l
-    bind = $mod, right, movefocus, r
-    bind = $mod, up, movefocus, u
-    bind = $mod, down, movefocus, d
+  # utility
+  # launcher
+  bind = $mod, D, exec, wofi --show drun
+  # terminal
+  bind = $mod, Return, exec, kitty
+  
+  # move focus
+  bind = $mod, left, movefocus, l
+  bind = $mod, right, movefocus, r
+  bind = $mod, up, movefocus, u
+  bind = $mod, down, movefocus, d
 
 # Switch workspaces with mainMod + [0-9]
 bind = $mod, 1, workspace, 1
@@ -166,23 +163,27 @@ bind = $mod SHIFT, 7, movetoworkspace, 7
 bind = $mod SHIFT, 8, movetoworkspace, 8
 bind = $mod SHIFT, 9, movetoworkspace, 9
 
-    # media controls
-    bindl = , XF86AudioPlay, exec, playerctl play-pause
-    bindl = , XF86AudioPrev, exec, playerctl previous
-    bindl = , XF86AudioNext, exec, playerctl next
 
-    # volume
+# volume
+bindle = , XF86AudioRaiseVolume, exec, wpctl set-volume -l "1.0" @DEFAULT_AUDIO_SINK@ 6%+
+bindle = , XF86AudioLowerVolume, exec, wpctl set-volume -l "1.0" @DEFAULT_AUDIO_SINK@ 6%-
+bindl = , XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
+bindl = , XF86AudioMicMute, exec, wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle
 
-    # backlight
 
-    # screenshot
-    # stop animations while screenshotting; makes black border go away
 
-    bind = CTRL, Print, exec, grimblast --notify --cursor copysave output
-    bind = $mod SHIFT CTRL, R, exec, grimblast --notify --cursor copysave output
+  # backlight
 
-    bind = ALT, Print, exec, grimblast --notify --cursor copysave screen
-    bind = $mod SHIFT ALT, R, exec, grimblast --notify --cursor copysave screen
+  # screenshot
+  # stop animations while screenshotting; makes black border go away
+
+  bind = CTRL, Print, exec, grimblast --notify --cursor copysave output
+  bind = $mod SHIFT CTRL, R, exec, grimblast --notify --cursor copysave output
+
+  bind = ALT, Print, exec, grimblast --notify --cursor copysave screen
+  bind = $mod SHIFT ALT, R, exec, grimblast --notify --cursor copysave screen
 
   '';
+  };
 }
+  
