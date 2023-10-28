@@ -1,17 +1,14 @@
-{ config, pkgs, lib, ... }: {
+{ config, pkgs, lib, nur, ... }: {
 
   programs.firefox = {
-  enable = true;
-  extensions = with pkgs.nur.repos.rycee.firefox-addons; [
+    enable = true;
+    profiles."aki"  = {
+    extensions = with pkgs.nur.repos.rycee.firefox-addons; [
     ublock-origin
     darkreader
     bypass-paywalls-clean
-  ];
-  profiles.default = {
-    id = 0;
-    name = "Default";
-    isDefault = true;
+    bitwarden
+    ];
+    };
   };
-};
-
 }

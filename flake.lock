@@ -196,6 +196,27 @@
         "type": "github"
       }
     },
+    "hyprland-contrib": {
+      "inputs": {
+        "nixpkgs": [
+          "hyprland",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1698409082,
+        "narHash": "sha256-Y9D2S63oV3aj+KS+qYZUBx48mrHN+wJC2WIVADmoCLM=",
+        "owner": "hyprwm",
+        "repo": "contrib",
+        "rev": "c0b2d2e2ad6568e58f9c7bd458a8a4baa5dd5e99",
+        "type": "github"
+      },
+      "original": {
+        "owner": "hyprwm",
+        "repo": "contrib",
+        "type": "github"
+      }
+    },
     "hyprland-protocols": {
       "inputs": {
         "nixpkgs": [
@@ -385,6 +406,21 @@
         "type": "github"
       }
     },
+    "nur": {
+      "locked": {
+        "lastModified": 1698513999,
+        "narHash": "sha256-JFWbAmExdWkghvKLjbNdWq2oNyrg5qcxTcCHrN1MTeA=",
+        "owner": "nix-community",
+        "repo": "NUR",
+        "rev": "984c4715454a4f5fdd753a1b667893c206729ab5",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-community",
+        "repo": "NUR",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
         "firefox-addons": "firefox-addons",
@@ -392,8 +428,10 @@
         "helix": "helix",
         "home-manager": "home-manager",
         "hyprland": "hyprland",
+        "hyprland-contrib": "hyprland-contrib",
         "nix-colors": "nix-colors",
         "nixpkgs": "nixpkgs_3",
+        "nur": "nur",
         "waybar-hyprland": "waybar-hyprland",
         "xdg-portal-hyprland": "xdg-portal-hyprland"
       }

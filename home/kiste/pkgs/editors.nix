@@ -1,6 +1,6 @@
 { config, pkgs, lib, ... }: {
 
-  environment.systemPackages = with pkgs; [
+  home.packages = with pkgs; [
     vscode
     helix
   ];
