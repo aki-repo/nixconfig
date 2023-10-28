@@ -126,7 +126,7 @@
   bindm = $mod, mouse:273, resizewindow
 
   # commands
-  bind = $mod Shift, Q, exec, exit,
+  bind = $mod Shift, Q, exec, pkill Hyprland
   bind = $mod, Q, killactive,
   bind = $mod, F, fullscreen,
   bind = $mod, W, togglesplit,
