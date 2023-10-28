@@ -47,6 +47,8 @@
       border_size = 3
       col.active_border = rgba(88888888)
       col.inactive_border = rgba(00000088)
+
+      layout = master
      }
  
     decoration {
