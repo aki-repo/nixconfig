@@ -126,7 +126,7 @@
   bindm = $mod, mouse:273, resizewindow
 
   # commands
-  bind = $mod SHIFT, Q, exec, exit,
+  bind = $mod Shift, Q, exec, exit,
   bind = $mod, Q, killactive,
   bind = $mod, F, fullscreen,
   bind = $mod, W, togglesplit,
@@ -138,6 +138,7 @@
   bind = $mod, D, exec, wofi --show drun
   # terminal
   bind = $mod, Return, exec, kitty
+  bind = $mod Shift, Return, exec, foot
   
   # move focus
   bind = $mod, left, movefocus, l
