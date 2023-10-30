@@ -8,6 +8,8 @@
     pywal
     pfetch
     pamixer
+    kitty
+    foot
   ];
 
 }

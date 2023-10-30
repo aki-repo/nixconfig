@@ -1,6 +1,6 @@
 { config, pkgs, lib, ... }: {
   imports = [
-    ./colors.nix
+    #./colors.nix
     ./editors.nix
     ./web.nix
   ];
