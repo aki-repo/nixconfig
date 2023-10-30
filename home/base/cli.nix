@@ -6,6 +6,7 @@
     brightnessctl
     moc
     pywal
+    pfetch
   ];
 
 }
