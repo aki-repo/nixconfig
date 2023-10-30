@@ -47,6 +47,11 @@
         # > Our main nixos configuration file <
         modules = [./hosts/kiste/configuration.nix];
       };
+      x230 = nixpkgs.lib.nixosSystem {
+        specialArgs = {inherit inputs outputs;};
+        modules = [./hosts/x230/configuration.nix];
+      };
+ 
     };
 
     # Standalone home-manager configuration entrypoint
@@ -55,11 +60,19 @@
       "aki@kiste" = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
         extraSpecialArgs = { inherit inputs outputs nix-colors; };
-    #    # > Our main home-manager configuration file <
+        # > Our main home-manager configuration file <
         modules = [./home/kiste/home.nix
                   hyprland.homeManagerModules.default
                   ];
       };
+      "aki@x230" = home-manager.lib.homeManagerConfiguration {
+        pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
+        extraSpecialArgs = { inherit inputs outputs nix-colors; };
+    #    # > Our main home-manager configuration file <
+        modules = [./home/x230/home.nix
+                  ];
+      };
+
     };
   };
 }
