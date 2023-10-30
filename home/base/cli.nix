@@ -7,6 +7,7 @@
     moc
     pywal
     pfetch
+    pamixer
   ];
 
 }
