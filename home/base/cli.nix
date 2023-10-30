@@ -5,6 +5,7 @@
     wireplumber
     brightnessctl
     moc
+    pywal
   ];
 
 }
