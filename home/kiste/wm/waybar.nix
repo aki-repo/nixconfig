@@ -1,5 +1,7 @@
 { config, pkgs, nix-colors, ... }: {
 
+
+
 programs.waybar = {
   enable = true;
   settings = 
@@ -17,14 +19,7 @@ programs.waybar = {
     modules-right = [ "pulseaudio" "network" "temperature" "battery" ];
 
     "hyprland/workspaces" = {
-      format = "<sub>{icon}</sub>\n{windows}";
-      format-window-separator = "\n";
-      window-rewrite-default = "";
-      window-rewrite = {
-        "firefox" = "";
-        "foot" = "";
-        "code" = "󰨞";
-      };
+      all-outputs = true;
     };
 
 
