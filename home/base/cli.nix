@@ -4,7 +4,7 @@
     cava
     wireplumber
     brightnessctl
-    mocp
+    moc
   ];
 
 }
