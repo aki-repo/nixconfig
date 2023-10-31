@@ -4,7 +4,7 @@
     nix-colors.homeManagerModules.default
   ];
 
-  colorScheme = nix-colors.colorSchemes.dracula;
+  #colorScheme = nix-colors.colorSchemes.dracula;
 
   programs = {
     kitty = {

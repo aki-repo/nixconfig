@@ -4,10 +4,12 @@
     cava
     wireplumber
     brightnessctl
+    moc
     pywal
+    pfetch
     pamixer
-    foot
     kitty
+    foot
   ];
 
 }
