@@ -5,6 +5,9 @@
     wireplumber
     brightnessctl
     pywal
+    pamixer
+    foot
+    kitty
   ];
 
 }
