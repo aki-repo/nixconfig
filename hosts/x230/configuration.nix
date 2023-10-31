@@ -99,6 +99,9 @@ boot.kernelPackages = pkgs.linuxPackages_zen;
     enable = true;
     wrapperFeatures.gtk = true;
   };
+  
+  # tlp
+  services.tlp.enable = true;
 
   # Enable CUPS to print documents.
   services.printing.enable = true;

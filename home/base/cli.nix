@@ -4,6 +4,7 @@
     cava
     wireplumber
     brightnessctl
+    pywal
   ];
 
 }
